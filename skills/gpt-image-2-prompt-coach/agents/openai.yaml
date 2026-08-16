@@ -1,0 +1,4 @@
+interface:
+  display_name: "GPT-Image-2 Prompt Coach"
+  short_description: "Shape precise GPT-Image-2 prompts through guided feedback"
+  default_prompt: "Use $gpt-image-2-prompt-coach to turn my rough image idea into a precise, concise English GPT-Image-2 prompt through guided feedback."
