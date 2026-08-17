@@ -19,6 +19,7 @@ Build a growing knowledge graph around user-selected topics. Treat chapters as g
 - Keep executable evidence in `code/` or `experiments/`; keep integrated work in `projects/`.
 - Treat a complex topic dossier as a small textbook unit. Use links to extend understanding, never to replace a definition or mechanism required by the current note.
 - Teach core concepts before API usage. Do not rely on the learner to identify missing terminology or hidden prerequisites.
+- Anchor each core technical term on its first explanatory use in an independent document with `英文正式术语（中文规范译名：准确、简炼地定义它是什么）`. When the concept has a natural code shape, type signature, command, data structure, pseudocode form, or state representation, show that minimal real expression near the first definition. After the anchor is established, default to the Chinese term and use `中文名（English term）` only when comparison, disambiguation, retrieval, or emphasis requires it.
 
 ## Workflow
 
@@ -51,7 +52,7 @@ Before creating the first deep topic:
 2. Identify mechanism families and build their concept dependency graphs.
 3. Select a representative lifecycle, control flow, data flow, state transition, or causal path for each family.
 4. Order the explanation so every required concept is defined before it is used.
-5. Introduce each backbone or bridging concept with its Chinese name, official English term, minimum distinguishing definition, and relation to the previous and next steps.
+5. Introduce each backbone or bridging concept with `英文正式术语（规范中文译名：准确、简炼地定义它是什么）`. Prefer a minimal real expression such as syntax, a type signature, a command, a data shape, pseudocode, or a state transition when one exists; explain its relation to the previous and next steps outside the naming line.
 6. Use a compact pseudocode trace, relationship diagram, or minimal code shape when it materially clarifies the whole mechanism family.
 7. Name necessary derived concepts and state which limitation or downstream problem produces them.
 8. Separate foundational, core, advanced, and specialized material without implying that specialized trivia defines mastery.
@@ -131,7 +132,7 @@ For a domain orientation, also verify:
 - backbone, bridging, necessary derived, contrast, and specialized concepts are not silently conflated;
 - necessary derived concepts name the problem or limitation that produces them;
 - at least one representative trace makes each central mechanism family predictable;
-- Chinese terminology and official English names appear on first introduction;
+- core terminology first appears in explanatory text as `英文正式术语（规范中文译名：准确、简炼地定义它是什么）`, with a minimal real expression nearby when one naturally exists;
 - full mechanism study is deferred to explicit deep-topic entries;
 - the orientation ends with a usable learning route and first deep topic.
 

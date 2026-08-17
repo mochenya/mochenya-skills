@@ -21,6 +21,12 @@ event loop -> drives -> Tasks and callbacks
 
 The map announces the vocabulary; it does not replace definitions. Introduce and define each primary term before using it to explain another primary term.
 
+## Anchor Core Terminology
+
+On the first explanatory use of each primary, necessary prerequisite, backbone, or bridging term in an independent document, write `英文正式术语（规范中文译名：准确、简炼地定义它是什么）`. When the concept has a natural syntax, type signature, command, data shape, pseudocode form, or state representation, show that minimal real expression near the definition. After the anchor is established, default to the Chinese term; use `中文名（English term）` only when comparison, disambiguation, retrieval, or emphasis requires it.
+
+The naming line establishes the term and its definition. It does not replace the later explanation of motivation, role, mechanism, boundaries, or verification.
+
 ## Classify Dependencies
 
 - **Primary concept**: The lesson must fully teach it.

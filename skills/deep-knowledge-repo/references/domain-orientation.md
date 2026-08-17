@@ -46,11 +46,19 @@ These roles organize orientation depth. They do not replace the primary/prerequi
 
 On first introduction of a backbone or bridging concept:
 
-1. give the established Chinese term and official English term;
-2. define it in one to three sentences so it can be distinguished from nearby concepts;
-3. state why it appears at this point in the mechanism;
-4. connect it to the previous and next concept;
+1. use `英文正式术语（规范中文译名：准确、简炼地定义它是什么）`;
+2. show a minimal real expression nearby when the concept has a natural syntax, type signature, command, data shape, pseudocode form, or state representation;
+3. use the following one to three sentences to distinguish it from nearby concepts;
+4. state why it appears at this point in the mechanism and connect it to the previous and next concept;
 5. name one important boundary when omitting it would create a false model.
+
+For example:
+
+```text
+type predicate（类型谓词：函数返回类型中形如 `value is T` 的类型标注，表示函数返回 `true` 时，TypeScript 将 `value` 视为 `T`。）
+```
+
+The naming line establishes the English name, Chinese name, accurate definition, and observable form. Keep motivation, mechanism, relations, and boundaries in the following prose instead of forcing them into the parenthetical definition.
 
 Do not repeat full bilingual terminology on every later occurrence. Do not give every concept the six-question deep-lesson treatment inside the orientation.
 
@@ -144,7 +152,7 @@ Before accepting an orientation, verify:
 - each family has a labeled mechanism spine;
 - every concept is defined before it is depended upon;
 - transitions explain why the next concept is needed;
-- Chinese and English terminology appears on first introduction;
+- core terminology first appears in explanatory text as `英文正式术语（规范中文译名：准确、简炼地定义它是什么）`, with a minimal real expression nearby when one naturally exists;
 - bridging concepts close the main mechanism rather than being silently assumed;
 - necessary derived concepts name their motivating problem;
 - a representative trace makes the central path predictable;

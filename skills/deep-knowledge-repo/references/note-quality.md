@@ -58,4 +58,4 @@ For architecture, libraries, or operational practices also record:
 - Standalone code contains a module-level purpose, meaningful names, focused functions, and comments for intent or non-obvious behavior rather than syntax narration.
 - The code follows the target language's normal formatting and error-handling conventions unless a deliberate deviation is the subject of the experiment.
 - The note does not merely paraphrase API documentation.
-- Primary terminology is defined before use, and self-check questions can reveal which concept a reader still needs to revisit.
+- Primary terminology is defined before use with the English formal term first, the normative Chinese term, and an accurate “what it is” definition; a minimal real expression is shown nearby when one naturally exists. Self-check questions can reveal which concept a reader still needs to revisit.
