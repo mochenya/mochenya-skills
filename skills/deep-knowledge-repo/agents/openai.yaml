@@ -1,4 +1,4 @@
 interface:
   display_name: "Deep Knowledge Repository"
-  short_description: "Build ordered, deep Obsidian knowledge repositories"
-  default_prompt: "Use $deep-knowledge-repo to orient a subject, map its core mechanisms in order, and build linked deep-learning notes."
+  short_description: "Build deep Obsidian topics and foundational courses"
+  default_prompt: "Use $deep-knowledge-repo to design an ordered foundational course or build linked deep-learning notes in Obsidian."

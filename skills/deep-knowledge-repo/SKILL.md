@@ -1,11 +1,11 @@
 ---
 name: deep-knowledge-repo
-description: Build and maintain subject-focused, deep-learning knowledge repositories in Obsidian Markdown. Use when initializing or orienting a learner in a new computer-science subject, mapping core mechanisms and derived concepts in a meaningful order, turning a requested concept into a durable topic dossier, linking mechanisms to engineering practice, or rebuilding live topic indexes without imposing fixed chapters.
+description: Build and maintain subject-focused, deep-learning knowledge repositories and personalized foundational curricula in Obsidian Markdown. Use when orienting a learner in a new computer-science subject, designing a zero-background or textbook-style course with ordered units, focused lessons, runnable examples, API operation coverage, exercises, and mastery gates, turning a concept into a durable topic dossier, linking mechanisms to engineering practice, or rebuilding live topic indexes without making chapter folders the source structure.
 ---
 
 # Deep Knowledge Repository
 
-Build a growing knowledge graph around user-selected topics. Treat chapters as generated navigation views, not as the source structure. Support both first-contact orientation and textbook-level mechanism study without confusing those two depths.
+Build a growing knowledge graph around user-selected topics. Treat chapters and course units as navigation views over durable knowledge, not as the only source structure. Support first-contact orientation, personalized foundational curricula, and textbook-level mechanism study without confusing those depths.
 
 ## Operating Model
 
@@ -13,8 +13,10 @@ Build a growing knowledge graph around user-selected topics. Treat chapters as g
 - Use `[[wikilinks]]` for relationships between notes and ordinary Markdown links for external sources.
 - Maintain three navigation views when the subject is broad: a human-curated domain orientation, an automatically rebuilt topic catalog, and a human-curated current learning path.
 - Build an ordered domain orientation before the first deep topic when the learner is entering a new or broad subject.
+- Build a curriculum coverage map before bulk-writing a zero-background, textbook-style, or multi-unit course.
 - Present orientation as a guided mechanism map, not a flat glossary and not a compressed textbook.
-- Keep short concepts in one note; split complex topics into mechanism, engineering, pitfalls, experiments, and project notes.
+- Separate course entry, unit entry, focused lesson, runnable lab, and integrated project responsibilities only when those artifacts have distinct jobs. A cohesive unit may be one substantial lesson plus runnable evidence; do not create a redundant unit entry or helper lesson merely to fill a hierarchy.
+- Keep a cohesive concept family in one sufficiently complete note. Split only when parts have independent mental models, prerequisites, practice, or reuse value; never split by a target file count, heading count, or desired note length.
 - Use frontmatter to describe subject, type, level, status, prerequisites, related topics, and applications.
 - Keep executable evidence in `code/` or `experiments/`; keep integrated work in `projects/`.
 - Treat a complex topic dossier as a small textbook unit. Use links to extend understanding, never to replace a definition or mechanism required by the current note.
@@ -36,6 +38,7 @@ Create or update `docs/00-index/学习目标.md`. Record the subject, prior know
 Choose the smallest workflow that satisfies the request:
 
 - **domain orientation**: a new repository, a learner entering a broad subject, or a request for a systematic high-level map;
+- **foundational curriculum**: a zero-background, personalized, textbook-style, or multi-unit course that must teach concepts, syntax, operations, runnable practice, and mastery in prerequisite order;
 - **topic dossier**: one coherent concept or mechanism that needs durable explanation;
 - **experiment or project**: executable verification or integrated practice;
 - **navigation maintenance**: repairing links, indexes, or the current route.
@@ -62,7 +65,22 @@ Store the high-level navigation view at `docs/00-index/领域全景.md` when the
 
 Do not present the main explanation as a table of unrelated terms. Use tables only for real comparisons, priority summaries, or compact indexes after the ordered narrative is established. Do not pretend that a minimum definition fully teaches a core mechanism; point to a future deep topic.
 
-### 5. Audit Concepts for a Deep Topic
+### 5. Design a Foundational Curriculum
+
+Read [foundational-course.md](references/foundational-course.md) before outlining or writing lessons. Use [foundational-course.md](assets/templates/foundational-course.md), [foundational-unit.md](assets/templates/foundational-unit.md), and [foundational-lesson.md](assets/templates/foundational-lesson.md) as deletable templates.
+
+1. Establish the stable personalized learning contract and course boundary.
+2. Build a curriculum coverage matrix for concepts, syntax, operations, evidence, practice, and mastery.
+3. Draw the prerequisite graph and assign every required item a first teaching location.
+4. Choose only the course, unit, lesson, lab, and project artifacts that have distinct responsibilities. Let a single substantial lesson represent a cohesive unit when an extra unit entry or micro-lesson would add navigation without learning value.
+5. Inventory course-relevant methods, commands, or API operations and define their teaching contracts.
+6. Design an example and practice ladder that progresses from prediction to independent use.
+7. Complete and verify one representative sample unit.
+8. Expand later units only after the sample passes the course quality gate.
+
+Do not start bulk lesson generation until the learning contract, coverage matrix, prerequisite graph, unit outcomes, and first sample unit are coherent.
+
+### 6. Audit Concepts for a Deep Topic
 
 Before outlining a teaching topic, identify its conceptual dependency graph. Classify every needed term as one of:
 
@@ -73,7 +91,9 @@ Before outlining a teaching topic, identify its conceptual dependency graph. Cla
 
 For every primary concept, establish its definition, motivation, role in the system, mechanism or lifecycle, boundaries, and verification. Surface this map near the start of the teaching note. Never omit a primary concept because a learner claims prior experience; adjust review density, not conceptual coverage.
 
-### 6. Create a Topic Dossier
+For a foundational course, perform this audit at two levels: map every required concept to its first teaching document across the course, then keep each document centered on one mechanism or a tightly cohesive knowledge group. Do not turn every term, helper call, method, or subsection into its own file. Treat a syntax form, method, command, or API operation used before its teaching point as a prerequisite leak unless it is explicitly marked and minimally explained as borrowed syntax.
+
+### 7. Create a Topic Dossier
 
 For a new topic, create a stable topic directory such as `docs/topics/asyncio-event-loop/`. Start with `00-主题入口.md`, then add only the supporting notes justified by complexity:
 
@@ -87,7 +107,7 @@ For a new topic, create a stable topic directory such as `docs/topics/asyncio-ev
 
 Use the templates in `assets/templates/` and load [note-quality.md](references/note-quality.md) when writing a deep explanation.
 
-### 7. Build Durable Understanding
+### 8. Build Durable Understanding
 
 Every substantial topic must explain the problem, mental model, lifecycle or execution order, invariants, examples, edge cases, engineering use, anti-patterns, and verification evidence. Explain why a design works, not only which API to call. Include version or source context when behavior may vary.
 
@@ -95,11 +115,13 @@ Keep prose concise by default. Increase depth only when the topic is foundationa
 
 Write each note so a reader can learn the central mechanism without the previous chat or an unstated earlier note. Begin with the problem, define required terminology on first use, show the concept map, trace a representative example, and end with self-check questions that point to the missing concept when unanswered.
 
-### 8. Adapt Without Hiding Concepts
+### 9. Adapt Without Hiding Concepts
 
 Use the learner's stated background only to decide how much prerequisite review, syntax explanation, and execution tracing to include. Preserve the same primary concept map for beginners, experienced learners, and deep-dive requests. Do not persist a personal mastery profile in notes; make each note independently useful through an explicit `最小前置知识` section and optional `快速回顾` material.
 
-### 9. Write Code as a Standalone Explanation
+In a personalized foundational course, persist stable choices such as starting knowledge, target capability, environment, language, preferred emphasis, practice style, and mastery criteria in the learning contract. Keep transient mistakes, scores, and conversation-only learner history out of durable topic notes.
+
+### 10. Write Code as a Standalone Explanation
 
 Treat executable examples as small teaching modules, not fragments pasted into a note:
 
@@ -112,15 +134,17 @@ Treat executable examples as small teaching modules, not fragments pasted into a
 - print stable, labeled observations and explain them in the companion note;
 - run every new executable example and record expected versus actual output.
 
+When a lesson teaches a method, command, standard-library object, or API family, inventory the course-relevant surface before writing. For each core operation, explain its call shape, receiver or command context, inputs, return value or output, state mutation and identity effects, failure or absence behavior, a natural example, and when a nearby alternative is clearer. Organize operations by the problem or lifecycle they serve instead of publishing an unexplained member list.
+
 Orientation pseudocode is exempt from execution only when it is explicitly labeled as pseudocode and does not claim implementation completeness.
 
-### 10. Link and Update Navigation
+### 11. Link and Update Navigation
 
 Use explicit sections or frontmatter for `prerequisites`, `related`, `contrasts`, `implemented-in`, and `used-in`. Tags classify notes; links express relationships. Keep tags small and hierarchical, normally three to five per note. Add links to both upstream concepts and downstream applications.
 
 Run `scripts/build-topic-index.ps1` after adding or renaming topics. It rebuilds `docs/00-index/主题总索引.md` from frontmatter. Update `docs/00-index/领域全景.md` when the domain map changes. Update `docs/00-index/当前学习路径.md` only when the learner's present study order changes; do not overwrite either curated view with generated output.
 
-### 11. Verify the Result
+### 12. Verify the Result
 
 Check that frontmatter is valid, internal links resolve, code is runnable or clearly marked pseudocode, and the topic is not an orphan. Use callouts for warnings, key invariants, and open questions. Use Mermaid only when a lifecycle or relationship diagram materially improves understanding.
 
@@ -138,6 +162,17 @@ For a domain orientation, also verify:
 
 For a textbook-level note, also verify that every primary term is defined before use, every necessary relation is explained rather than only linked, one representative execution can be predicted from the text, and self-check questions expose likely knowledge gaps.
 
+For a foundational curriculum, also verify:
+
+- every promised outcome maps to one or more teaching documents, runnable observations, and practice tasks;
+- no lesson silently relies on syntax, terminology, methods, or mechanisms scheduled for a later lesson;
+- each course-relevant API operation has an explicit teaching location and a complete operation contract;
+- examples form a progression from minimal shape and prediction to execution trace, boundary variation, guided modification, and independent use where the topic warrants it;
+- comments explain intent, mechanism, expectation, or boundary rather than narrating visible syntax;
+- unit synthesis tasks use only previously taught material and require more than copying the worked example;
+- completion criteria test definition, prediction, explanation, modification, debugging, or transfer rather than page completion or successful execution alone;
+- the first sample unit passes the full quality gate before bulk-generating later units.
+
 ## Subject Adaptation
 
 Keep the workflow subject-neutral. Adapt mechanism families and sequencing to the subject:
@@ -152,12 +187,13 @@ Do not force subjects into a common chapter list. Choose an order that follows r
 ## Resources
 
 - Read [domain-orientation.md](references/domain-orientation.md) when initializing a subject, building a high-level map, or revising an orientation that has become a flat list.
+- Read [foundational-course.md](references/foundational-course.md) when building a zero-background, personalized, textbook-style, or multi-unit course.
 - Read [note-quality.md](references/note-quality.md) for the deep-note quality contract and review rubric.
 - Read [code-quality.md](references/code-quality.md) when adding runnable examples or experiments.
 - Read [concept-first-teaching.md](references/concept-first-teaching.md) before writing a textbook-level topic or explaining a mechanism with hidden prerequisites.
 - Read [adaptive-explanation.md](references/adaptive-explanation.md) when the learner states a background level or when choosing prerequisite density.
 - Read [metadata-schema.md](references/metadata-schema.md) for frontmatter fields.
 - Read [relationship-model.md](references/relationship-model.md) when adding or repairing graph edges.
-- Copy templates from `assets/templates/`; use `domain-orientation.md` for broad first-contact maps and `textbook-lesson.md` for foundational deep topics.
+- Copy templates from `assets/templates/`; use `domain-orientation.md` for broad first-contact maps, the `foundational-*` templates for course/unit/lesson artifacts, and `textbook-lesson.md` for an independent deep topic.
 - Run `scripts/init-knowledge-repo.ps1` for a new repository and `scripts/build-topic-index.ps1` to rebuild the catalog.
 
