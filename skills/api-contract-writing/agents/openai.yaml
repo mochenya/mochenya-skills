@@ -1,0 +1,4 @@
+interface:
+  display_name: "API Contract Writing"
+  short_description: "Write precise consumer-facing API contracts"
+  default_prompt: "Use $api-contract-writing to write or review a precise API contract document without framework-specific frontend code."
