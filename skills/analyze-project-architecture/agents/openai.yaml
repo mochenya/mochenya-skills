@@ -1,0 +1,7 @@
+interface:
+  display_name: "项目架构分析"
+  short_description: "从源码证据生成可学习的项目架构知识库"
+  default_prompt: "使用 $analyze-project-architecture 分析这个仓库，生成源码证据驱动的架构总览、模块拆解、流程图和 Obsidian Markdown。"
+
+policy:
+  allow_implicit_invocation: true
