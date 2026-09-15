@@ -1,4 +1,4 @@
 interface:
   display_name: "系统化计算机学习"
-  short_description: "从设计原因、运行机制、语法操作到工程使用的系统学习辅导"
-  default_prompt: "使用 $learn-cs-systematically 讲清一个主题为什么这样设计、实际怎样工作和工程中何时使用，并完整覆盖当前范围内的核心概念与常用操作。"
+  short_description: "根据新学或复习需要，连接核心概念、工作机制、设计取舍与实际操作"
+  default_prompt: "使用 $learn-cs-systematically，根据我当前的理解和学习目标讲解或复习这个主题，讲清关键概念与机制，并在需要时指出学习重点和进阶方向。"
