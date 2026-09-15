@@ -1,6 +1,6 @@
 ---
 name: gpt-image-2-prompt-coach
-description: Turn vague visual ideas or draft prompts into concise, precise English prompts for GPT-Image-2 through dynamic clarification, candidate directions, and iterative feedback. Use for image generation, editing, style transfer, compositing, text-in-image, product visuals, UI or infographics, portraits, and character-consistency prompts. Focus on visual description and prompt quality; do not teach API invocation.
+description: Write or refine copy-ready GPT-Image-2 prompts when the user asks for prompt design or coaching. Do not use when the user wants Codex to generate or edit the image itself, or asks how to call the API.
 ---
 
 # GPT-Image-2 Prompt Coach

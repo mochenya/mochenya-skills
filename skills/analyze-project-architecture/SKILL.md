@@ -1,6 +1,6 @@
 ---
 name: analyze-project-architecture
-description: 从源码证据分析陌生软件仓库，梳理架构、运行流程、模块机制与设计取舍，并产出可学习的 Obsidian Markdown。适用于用户要求系统理解开源项目或 Agent 项目；不用于普通修 bug、代码审查或脱离源码的架构臆测。
+description: 面向教学，从源码证据系统讲解软件项目的架构、运行流程、模块机制与设计取舍，并可生成 Obsidian Markdown 学习材料。用于学习、理解或教授一个具体项目；不用于功能开发、修 bug 或普通代码审查。
 metadata:
   short-description: 源码证据驱动的项目架构学习
 ---

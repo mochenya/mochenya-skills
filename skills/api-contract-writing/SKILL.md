@@ -1,6 +1,6 @@
 ---
 name: api-contract-writing
-description: Write or review precise consumer-facing API contract documents. Use when an API needs a clear request/response schema, field semantics, business rules, permission and error behavior, examples, or a quality review. Keep the document framework-neutral and do not turn this skill into an implementation, testing, OpenAPI-generation, or frontend-code workflow unless the user explicitly asks for those separate tasks.
+description: 编写或审查用于前后端对接的 API 接口文档，明确请求与响应、字段语义、业务规则、权限和错误约定。用于把接口行为整理成前后端共同遵守的对接契约；不用于实现后端接口或前端代码。
 ---
 
 # API Contract Writing

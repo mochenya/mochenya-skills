@@ -1,6 +1,6 @@
 ---
 name: deep-knowledge-repo
-description: Build and maintain subject-focused, deep-learning knowledge repositories and personalized foundational curricula in Obsidian Markdown. Use when orienting a learner in a new computer-science subject, designing a zero-background or textbook-style course with ordered units, focused lessons, runnable examples, API operation coverage, exercises, and mastery gates, turning a concept into a durable topic dossier, linking mechanisms to engineering practice, or rebuilding live topic indexes without making chapter folders the source structure.
+description: Build or maintain repository-scale Obsidian knowledge bases and structured curricula. Use when the user explicitly requests a durable multi-file learning repository; not for conversational teaching, single-note creation, or source-project architecture study.
 ---
 
 # Deep Knowledge Repository

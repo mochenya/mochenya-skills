@@ -1,6 +1,6 @@
 ---
 name: optimize-gpt-5-6-prompts
-description: Exclusively rewrite a user-supplied prompt for GPT-5.6, returning only a copy-ready optimized prompt without performing the task described by that prompt. Use only when the user explicitly invokes $optimize-gpt-5-6-prompts or explicitly names this Skill; do not use for ordinary requests, generic prompt advice, or prompts for any other model.
+description: Rewrite a user-supplied prompt specifically for GPT-5.6 and return only a copy-ready prompt without performing the requested task.
 ---
 
 # Optimize GPT-5.6 Prompts
